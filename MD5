@@ -1,0 +1,15 @@
+40b00764e529a8e8e8755ee39ebfc4f6 *DESCRIPTION
+c24e8179a1b10ff1107b6f6402b4a629 *NAMESPACE
+eb5a8683da61c91cc11a9e14982a5b22 *R/metadata.R
+42ef771169ded41b8ff2b0ce57a4fb2f *R/treebase.R
+ace7c6234cbfad95a4744490c7eeb28a *demo/00Index
+d989cb57207f70373c195bda7dc8fcb4 *demo/examples.R
+6438b8b770dad90d2836d85b432aebb4 *demo/furnariidae.R
+598a6dbe20407812a639dc85d780f42b *demo/long_examples.R
+803a6889971e9f1867cb28c980a801ff *man/dryad_metadata.Rd
+d5e2e280d821d629604b32040e9b6943 *man/get_nexus.Rd
+03274b15d78eac208315eb87e2349596 *man/get_study_id.Rd
+e8d53a0c616fadacf32bcde85b607fe9 *man/metadata.Rd
+13043501185e26e3fcb05b82881955e9 *man/oai_metadata.Rd
+a97ef5dbb3beb09a4df3900a55d5f9c6 *man/search_metadata.Rd
+b32a78fb77940f9edf218a8923c49b59 *man/search_treebase.Rd
