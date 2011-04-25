@@ -1,6 +1,13 @@
+version 0.0-6
+-------------
+ * All metadata handling is streamlined in the metadata function, 
+ which now returns a data.frame (actually a data.table) instead of a list,
+ and includes the metadata from both Phylo-WS and OAI-MPH interfaces.  
+
+
 
 version 0.0-5
-============
+-------------
 
  * Improved error handling
  * Will allow multiple attempts if fails to access resource

@@ -1,8 +1,8 @@
-\name{search_metadata}
-\alias{search_metadata}
-\title{Search the metadata on treebase using the OAI-MPH interface}
+\name{download_metadata}
+\alias{download_metadata}
+\title{Download the metadata on treebase using the OAI-MPH interface}
 \usage{
-  search_metadata(query = "",
+  download_metadata(query = "",
     by = c("all", "until", "from"), curl = getCurlHandle())
 }
 \arguments{
@@ -16,11 +16,11 @@
   here. Avoids repeated handshakes with server.}
 }
 \description{
-  Search the metadata on treebase using the OAI-MPH
+  Download the metadata on treebase using the OAI-MPH
   interface
 }
 \details{
-  query must be#' search_metadata(2010-01-01, by="until")
+  query must be#' download_metadata(2010-01-01, by="until")
   all isn't a real query type, but will return all trees
   regardless of date
 }
@@ -32,7 +32,7 @@ Near <- search_treebase("Near", "author", max_trees=1)
 metadata("2377")
 
 ### get all trees from a certain depostition date forwards ##
-m <- search_metadata("2009-01-01", by="until")
+m <- download_metadata("2009-01-01", by="until")
 ## extract any metadata, e.g. publication date:
 dates <- sapply(m, function(x) as.numeric(x$date))
 hist(dates, main="TreeBase growth", xlab="Year")
@@ -46,7 +46,7 @@ a <- as.factor(unlist(authors))
 head(summary(a))
 
 ## Show growth of TreeBASE
-all <- search_metadata("", by="all")
+all <- download_metadata("", by="all")
 dates <- sapply(all, function(x) as.numeric(x$date))
 hist(dates, main="TreeBase growth", xlab="Year")
 

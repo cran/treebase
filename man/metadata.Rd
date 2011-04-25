@@ -1,31 +1,38 @@
+\docType{data}
 \name{metadata}
 \alias{metadata}
-\title{Get the metadata associated with the study in which the phylogeny
- was published.}
+\title{metadata.rda}
 \usage{
-  metadata(study.id, curl = getCurlHandle())
+  metadata(phylo.md = NULL, oai.md = NULL)
 }
 \arguments{
-  \item{study.id}{The treebase study id (numbers only,
-  specify in quotes)}
+  \item{phylo.md}{cached phyloWS (tree) metadata,
+  (optional)}
 
-  \item{curl}{if calling in series many times, call
-  getCurlHandle() first and then pass the return value in
-  here.  avoids repeated handshakes with server.}
+  \item{oai.md}{cached OAI-PMH (study) metadata (optional)}
+}
+\value{
+  a data frame of all available metadata, (as a data.table
+  object) columns are: "Study.id", "Tree.id", "kind",
+  "type", "quality", "ntaxa" "date", "publisher", "author",
+  "title".
 }
 \description{
-  Get the metadata associated with the study in which the
-  phylogeny was published.
+  Contains a cache of all publication metadata the
+  search_metadata() to pull down when run on 2012-05-12.
+
+  generate a table of all available metadata for TreeBASE
+  entries
 }
 \details{
-  if the tree is imported with search_treebase, then this
-  is in tree$S.id
+  recreate with: \code{ search_metadata() }
 }
 \examples{
 \dontrun{
-  tree <- search_treebase("1234", "id.tree")
-  metadata(tree$S.id)
+meta <- metadata()
+meta[publisher \%in\% c("Nature", "Science") & ntaxa > 100 & kind == "Species Tree",]
 }
 }
-\keyword{utilities}
+\keyword{data}
+\keyword{datasets}
 
