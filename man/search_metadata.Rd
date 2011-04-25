@@ -2,8 +2,8 @@
 \alias{search_metadata}
 \title{Search the metadata on treebase using the OAI-MPH interface}
 \usage{
-  search_metadata(query, by = c("until", "from", "all"),
-    curl = getCurlHandle())
+  search_metadata(query = "",
+    by = c("all", "until", "from"), curl = getCurlHandle())
 }
 \arguments{
   \item{query}{a date in format yyyy-mm-dd}

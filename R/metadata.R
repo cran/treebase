@@ -23,7 +23,8 @@ metadata <- function(study.id, curl=getCurlHandle()){
   oai_url <- "http://treebase.org/treebase-web/top/oai?verb=" 
   get_record <- "GetRecord&metadataPrefix=oai_dc&identifier=" 
   query <- paste(oai_url, get_record, "TB:s", study.id, sep="")
-  oai_metadata(query, curl=curl)
+  out <- oai_metadata(query, curl=curl)
+  out[[1]]
 }
 
 
@@ -67,7 +68,7 @@ metadata <- function(study.id, curl=getCurlHandle()){
 #' text(b, names(J), srt=70, pos=4, xpd=T)
 #' }
 #' @export
-search_metadata <- function(query, by=c("until", "from", "all"),
+search_metadata <- function(query="", by=c("all", "until", "from"),
                             curl=getCurlHandle()){
   by = match.arg(by)
   oai_url <- "http://treebase.org/treebase-web/top/oai?verb=" 
@@ -117,7 +118,7 @@ get_study_id <- function(search_results){
 #' }
 #' @export
 get_study <- function(search_results, curl=getCurlHandle(), ...){
-  sapply(s, function(x) search_treebase(x, input="id.study", curl=curl, ...))
+  sapply(search_results, function(x) search_treebase(x, input="id.study", curl=curl, ...))
 }
 
 #' Search the dryad metadata archive
@@ -144,7 +145,7 @@ dryad_metadata <- function(study.id, curl=getCurlHandle()){
 #' @keywords internal
 #' @seealso \code{\link{dryad_metadata}}
 oai_metadata <- function(query, curl=curl){
-  print(query)
+  message(query)
   tt <- getURLContent(query, followlocation=TRUE, curl=curl)
   doc <- xmlParse(tt)
   dc = getNodeSet(doc, "//dc:dc", namespaces=c(dc="http://www.openarchives.org/OAI/2.0/oai_dc/"))
