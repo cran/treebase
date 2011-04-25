@@ -1,4 +1,5 @@
 export(dryad_metadata)
+export(get_study)
 export(get_study_id)
 export(metadata)
 export(search_metadata)
