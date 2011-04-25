@@ -1,17 +1,19 @@
-version 0.0-6
+version 0.0-7.1
+---------------
+
+* Rely on new Authors@R only
+
+version 0.0-7
 -------------
- * All metadata handling is streamlined in the metadata function, 
- which now returns a data.frame (actually a data.table) instead of a list,
- and includes the metadata from both Phylo-WS and OAI-MPH interfaces.  
 
-
+* exclude unnecessary files
 
 version 0.0-5
 -------------
 
- * Improved error handling
- * Will allow multiple attempts if fails to access resource
- * Search now supports query by doi
- * updated caches
- * outdated demos removed
+* Improved error handling
+* Will allow multiple attempts if fails to access resource
+* Search now supports query by doi
+* updated caches
+* outdated demos removed
 
