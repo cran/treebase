@@ -1,3 +1,9 @@
+version 0.1.2
+-------------
+
+* eliminates reshape2 and data.table dependency (used only in illustrative examples), 
+  which avoids warnings of namespace collisions caused by recent updates to data.table.
+
 version 0.1.1
 -------------
 

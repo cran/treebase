@@ -7,9 +7,11 @@
 #' "date", "publisher", "author", "title".  
 #' @examples \dontrun{
 #' meta <- metadata()
+#' library("data.table")
 #' meta[publisher %in% c("Nature", "Science") & ntaxa > 50 & kind == "Species Tree",]
 #' }
-#' @import reshape2 data.table
+# @importFrom reshape2 melt dcast
+# @suggest data.table
 #' @export
 metadata <- function(phylo.md = NULL, oai.md=NULL){
 
