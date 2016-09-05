@@ -1,8 +1,16 @@
-version 0.1.2
+version 0.1.3
 -------------
 
-* eliminates reshape2 and data.table dependency (used only in illustrative examples), 
-  which avoids warnings of namespace collisions caused by recent updates to data.table.
+Declare VignetteBuilder
+
+
+version 0.1.2
+--------------
+
+2016-04-13
+
+* bugfix for performance issues on downloading trees 
+
 
 version 0.1.1
 -------------

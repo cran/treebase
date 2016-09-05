@@ -7,11 +7,8 @@
 #' "date", "publisher", "author", "title".  
 #' @examples \dontrun{
 #' meta <- metadata()
-#' library("data.table")
 #' meta[publisher %in% c("Nature", "Science") & ntaxa > 50 & kind == "Species Tree",]
 #' }
-# @importFrom reshape2 melt dcast
-# @suggest data.table
 #' @export
 metadata <- function(phylo.md = NULL, oai.md=NULL){
 
@@ -19,9 +16,6 @@ metadata <- function(phylo.md = NULL, oai.md=NULL){
     phylo.md <- cache_treebase(only_metadata=TRUE, save=FALSE)
   if(is.null(oai.md))
     oai.md <- download_metadata() 
-
-  #  phylo_data <- melt(phylo.md) # This is very slow
-  #  phylo <- dcast(phylo_data, ... ~ L2)
 
   phylo <- 
     data.frame(Study.id = phylo_metadata("Study.id", phylo.md), 
@@ -58,7 +52,7 @@ metadata <- function(phylo.md = NULL, oai.md=NULL){
 #      # calls will work without a metadata object, but requires longer to download data
 #      kind <- phylo_metadata("kind")
 #      type <- phylo_metadata("type") 
-#      table(kind, type)
+#     table(kind, type)
 #      }
 #      # but are much faster if the data object is provided, see cache_treebase():
 #      data(treebase)
