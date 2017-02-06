@@ -1,6 +1,6 @@
-5b803fcc39d08c9d2ba7aaa8ab4f3a62 *DESCRIPTION
+a5a927c0ff4550d6aacb71b30a332258 *DESCRIPTION
 24228c63cc2b7b6dc1c92f6414c16616 *NAMESPACE
-ce3af9bfa74f91701561f1acc2a4c9e5 *NEWS
+765c7214406f2a437ab1bd5dd6c59b8f *NEWS
 9c9a6f096c9193aba69963778a8108b4 *R/cache_treebase.R
 84ea2bb7e79876cecfa95e02ad39e329 *R/clean_metadata.R
 f1beb19ed2f59fe1a681319882fec659 *R/data.R
@@ -8,7 +8,7 @@ f1beb19ed2f59fe1a681319882fec659 *R/data.R
 71f71006cc057452b6e65f50ad115aa2 *R/metadata.R
 fe98fd212d22a3378d998dc6b86d6293 *R/treebase.R
 f91933131b579a90fe02d622f6cba93a *README.md
-4de690f097d6f2baae3cd77abef13de2 *build/vignette.rds
+2be191a5c735072fe7b80b7653d5eecc *build/vignette.rds
 3038bfc78545062141abc0589644e406 *data/datalist
 620ececef79a41b0bbd70703bf82c527 *data/metadata.rda
 8f2279f2e82d4c060779a7e8c30ff65c *data/treebase.rda
@@ -41,7 +41,7 @@ a3207f7e509d09aa8c4297bd5790ba70 *inst/doc/html/show_metadata.html
 894ce3427bb5502ae411f1b0daa76dbd *inst/doc/html/treebase.html
 6c7c8d72ad606be3fa38b5a7cb62d363 *inst/doc/vignette.R
 9c460267f98f5f94b55f1ab07e2f41e0 *inst/doc/vignette.Rmd
-8824db1d71d1eccac44f7c5ffdab5774 *inst/doc/vignette.html
+f45a8756dc0f4d92a7a6e0be8cdda405 *inst/doc/vignette.html
 7ad4ed4cf895072856509071995e8d13 *man/cache_treebase.Rd
 fb6a90b13b27807603c4525c5544bc3f *man/clean_data.Rd
 01111c334d18342b6e03c3a44a9d3b7a *man/download_metadata.Rd
