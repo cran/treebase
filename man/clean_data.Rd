@@ -7,7 +7,7 @@
 clean_data(metadata)
 }
 \arguments{
-\item{a}{list item with fishbase data}
+\item{metadata}{list item with fishbase data}
 }
 \value{
 the item scrubbed of non-ASCII characters
@@ -16,4 +16,3 @@ the item scrubbed of non-ASCII characters
 clean the fish.base data into pure ASCII
 }
 \keyword{internal}
-
